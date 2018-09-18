@@ -1,0 +1,14 @@
+record(ai, $(PREFIX):analog1) {
+  field(PINI, "yes")
+  field(SCAN, "1 second")
+  field(DESC, "test analog1")
+  field(VAL, "10")
+}
+
+record(calc, $(PREFIX):analog2) {
+  field(PINI, "yes")
+  field(SCAN, "1 second")
+  field(DESC, "test analog2")
+  field(INPA, "$(PREFIX):analog1")
+  field(CALC, "A + 0.001")
+}
